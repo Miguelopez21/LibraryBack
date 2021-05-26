@@ -38,7 +38,7 @@ namespace WebApi.Controllers
                     Email = editorial.Email,
                     Direction = editorial.Direction,
                     Phone = editorial.Phone,
-                    MaxRegisteredBooks = editorial.Phone,
+                    MaxRegisteredBooks = editorial.MaxRegisteredBooks,
                     CreatedDate = DateTime.Now,
                     UpdatedDate = null
                 });
