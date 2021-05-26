@@ -36,7 +36,9 @@ namespace WebApi.Controllers
             var list = await repositoryBook.GetAllAsync(filter => 
                 (string.IsNullOrEmpty(title) || filter.Title.Contains(title))
                 && (string.IsNullOrEmpty(authorName) || filter.Author.Name.Contains(authorName))
-                && (year <= 0 || filter.Year.Year == year));
+                && (year <= 0 || filter.Year.Year == year), new List<string>() {
+                    "Author"
+                });
 
             return Ok(list);
         }
